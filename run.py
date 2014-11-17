@@ -30,6 +30,13 @@ def hello_monkey():
 #     return str(resp)
 
 
+@app.route("/send")
+def send_message():
+  message = client.messages.create(body="HELLO?! IS ANYBODY THERE?!",
+    to="+12017570419",
+    from_="+14158814524")
+  print message.sid
+  return message.sid
 
 
 
@@ -50,10 +57,3 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-# @app.route("/send")
-# def send_message():
-#   message = client.messages.create(body="HELLO?! IS ANYBODY THERE?!",
-#     to="+12017570419",
-#     from_="+14158814524")
-#   print message.sid
-#   return message.sid
