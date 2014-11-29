@@ -49,7 +49,7 @@ client = TwilioRestClient(account_sid, auth_token)
  
 # Try adding your own number to this list!
 callers = {
-    "+12017570419": "Adnan"
+    "+12017570419": "Adnan",
     "+12019706112": "Omar"
 }
 
