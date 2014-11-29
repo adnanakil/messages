@@ -32,11 +32,11 @@ def hello_monkey():
 
 @app.route("/send")
 def send_message():
-  message = client.messages.create(body="HELLO?! IS ANYBODY THERE?!",
+  message = client.messages.create(body="Hi There, here are your options for this week",
     to="+12017570419",
     from_="+14158814524")
-  print message.sid
-  return message.sid
+    #print message.sid
+#return message.sid
 
 
 
@@ -49,7 +49,8 @@ client = TwilioRestClient(account_sid, auth_token)
  
 # Try adding your own number to this list!
 callers = {
-    "+12017570419": "Curious George"
+    "+12017570419": "Adnan"
+    "+12019706112": "Omar"
 }
 
 
